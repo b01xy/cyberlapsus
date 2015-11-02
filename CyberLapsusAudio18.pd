@@ -1,0 +1,62 @@
+#N canvas 676 93 1239 962 10;
+#X obj -2 -1 cnv 15 1280 1024 empty empty Cyber_Lapsus 20 12 0 14 -1
+-233017 0;
+#X obj 2 28 cnv 15 390 221 empty empty Azertyuiop 20 12 0 14 -195568
+-66577 0;
+#X obj 402 28 cnv 15 390 221 empty empty Clavier 20 12 0 14 -195568
+-66577 0;
+#X obj 0 726 cnv 15 390 200 empty empty Affichage 20 12 0 14 -195568
+-66577 0;
+#X obj 402 727 cnv 15 390 200 empty empty Initialisations 20 12 0 14
+-195568 -66577 0;
+#X obj 19 261 cnv 15 1168 460 empty empty empty 20 12 0 14 -66577 -66577
+0;
+#X obj 802 28 cnv 15 390 221 empty empty Ya_qqun? 20 12 0 14 -195568
+-66577 0;
+#X obj 805 726 cnv 15 390 200 empty empty Commentaires 20 12 0 14 -195568
+-66577 0;
+#X obj 25 266 cnv 15 1155 450 empty empty Clavier2audio-video 20 12
+0 14 -260145 -4 0;
+#X obj 580 487 f;
+#X obj 611 487 + 1;
+#X obj 641 487 % 6;
+#X obj 595 468 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 615 512 5 0 0 0 - - -, f 5;
+#X obj 580 509 + 1;
+#X obj 557 578 gate 6;
+#X obj 534 451 t a a b;
+#X obj 534 311 netreceive 3001;
+#X obj 557 350 print tcp;
+#X obj 636 352 tgl 32 0 empty empty empty 17 7 0 10 -258113 -4034 -1
+0 1;
+#X obj 317 638 lecteurCybAudio;
+#X obj 544 791 loadbang;
+#X msg 544 846 \; pd dsp 1;
+#X floatatom 679 350 5 0 0 0 - - -, f 5;
+#X obj 429 638 lecteurCybAudio;
+#X obj 541 638 lecteurCybAudio;
+#X obj 653 638 lecteurCybAudio;
+#X obj 765 638 lecteurCybAudio;
+#X obj 877 638 lecteurCybAudio;
+#X obj 544 819 delay 3000;
+#X connect 9 0 10 0;
+#X connect 9 0 14 0;
+#X connect 10 0 11 0;
+#X connect 11 0 9 1;
+#X connect 12 0 9 0;
+#X connect 14 0 13 0;
+#X connect 14 0 15 0;
+#X connect 15 0 20 0;
+#X connect 15 1 24 0;
+#X connect 15 2 25 0;
+#X connect 15 3 26 0;
+#X connect 15 4 27 0;
+#X connect 15 5 28 0;
+#X connect 16 0 15 1;
+#X connect 16 2 9 0;
+#X connect 17 0 16 0;
+#X connect 17 1 19 0;
+#X connect 17 1 23 0;
+#X connect 21 0 29 0;
+#X connect 29 0 22 0;

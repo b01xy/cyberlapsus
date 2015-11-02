@@ -1,44 +1,208 @@
-#N canvas 201 65 1254 805 10;
-#X obj -24 -41 inlet;
-#X obj -24 410 outlet;
-#X obj 26 -41 inlet;
-#X obj -42 85 t b a b;
-#X obj -24 22 random 30;
-#X obj -24 45 + 1;
-#X obj -24 3 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
--1;
-#X floatatom -16 66 5 0 0 0 - - -, f 5;
-#X floatatom 26 6 5 0 0 0 - - -, f 5;
-#X obj 124 164 bng 15 250 50 0 empty empty La_Fin 20 7 0 8 -1 -262144
--1;
-#X floatatom -9 164 7 0 0 2 - - -, f 7;
-#X obj -9 128 tgl 19 0 empty gemvfb Gem 0 -6 0 8 -258699 -1 -1 0 1
-;
-#X obj 98 90 vsl 8 40 0 1 0 0 empty alphavfb empty 0 -8 0 8 -195568
+#N canvas 181 151 1351 928 10;
+#X obj 184 -35 cnv 15 800 1000 empty empty empty 20 12 0 14 -128992
+-66577 0;
+#X obj 191 -28 cnv 15 780 880 empty empty Video_Fond_Bleu 20 12 0 14
+-260145 -4 0;
+#X obj 298 41 tgl 19 0 empty empty Gem 0 -6 0 8 -258699 -1 -1 0 1;
+#X obj 298 622 alpha;
+#X obj 237 607 tgl 15 1 empty empty empty 0 -6 0 8 -262144 -1 -1 1
+1;
+#X obj 298 643 color;
+#X obj 423 566 vsl 8 50 0 1 0 0 empty empty empty 0 -8 0 8 -258699
+-1 -1 4900 1;
+#X obj 431 566 vsl 8 50 0 1 0 0 empty empty empty 0 -8 0 8 -24198 -1
+-1 4900 1;
+#X obj 439 566 vsl 8 50 0 1 0 0 empty empty empty 0 -8 0 8 -355 -1
+-1 4900 1;
+#X obj 447 566 vsl 8 50 0 1 0 0 empty empty empty 0 -8 0 8 -195568
 -1 -1 0 1;
-#X floatatom 98 133 3 0 0 0 - - -, f 3;
-#X floatatom 57 133 4 0 0 2 Taille tailVidFb -, f 4;
-#X obj 124 128 bng 19 250 50 0 empty empty Start 0 -8 0 8 -24198 -258699
+#N canvas 1 110 452 302 color 0;
+#X obj 44 212 pack f f f f;
+#X msg 44 236 \$1 \$2 \$3 \$4;
+#X obj 26 145 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
 -1;
-#X obj -9 147 LecteurVideoFondbleu \$1;
-#X obj -42 522 delay 0;
-#X floatatom -5 504 5 0 0 2 Delay_avid Delay_avid -, f 5;
-#X connect 0 0 6 0;
-#X connect 2 0 8 0;
-#X connect 3 0 17 0;
-#X connect 3 1 1 0;
-#X connect 3 1 16 1;
-#X connect 4 0 5 0;
-#X connect 5 0 7 0;
+#X obj 41 144 t b f;
+#X obj 41 35 vsl 8 50 0 1 0 0 empty empty empty 0 -8 0 8 -258699 -1
+-1 4900 1;
+#X obj 49 35 vsl 8 50 0 1 0 0 empty empty empty 0 -8 0 8 -24198 -1
+-1 4900 1;
+#X obj 57 35 vsl 8 50 0 1 0 0 empty empty empty 0 -8 0 8 -355 -1 -1
+4900 1;
+#X obj 65 35 vsl 8 50 0 1 0 0 empty empty empty 0 -8 0 8 -195568 -1
+-1 0 1;
+#X obj 63 167 t b f;
+#X obj 86 189 t b f;
+#X floatatom 77 86 5 0 0 0 - - -, f 5;
+#X floatatom 67 101 5 0 0 0 - - -, f 5;
+#X floatatom 53 115 5 0 0 0 - - -, f 5;
+#X floatatom 35 129 5 0 0 0 - - -, f 5;
+#X obj 17 7 inlet;
+#X obj 52 7 inlet;
+#X obj 87 7 inlet;
+#X obj 122 8 inlet;
+#X obj 44 261 outlet;
+#X connect 0 0 1 0;
+#X connect 1 0 18 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 3 1 0 1;
+#X connect 4 0 0 0;
+#X connect 4 0 13 0;
 #X connect 5 0 3 0;
-#X connect 6 0 4 0;
-#X connect 8 0 4 1;
-#X connect 11 0 16 0;
-#X connect 12 0 13 0;
-#X connect 13 0 16 3;
-#X connect 14 0 16 2;
-#X connect 15 0 16 4;
-#X connect 16 0 10 0;
-#X connect 16 1 9 0;
-#X connect 17 0 15 0;
-#X connect 18 0 17 1;
+#X connect 5 0 12 0;
+#X connect 6 0 8 0;
+#X connect 6 0 11 0;
+#X connect 7 0 9 0;
+#X connect 7 0 10 0;
+#X connect 8 0 0 0;
+#X connect 8 1 0 2;
+#X connect 9 0 0 0;
+#X connect 9 1 0 3;
+#X connect 14 0 4 0;
+#X connect 15 0 5 0;
+#X connect 16 0 6 0;
+#X connect 17 0 7 0;
+#X restore 414 626 pd color;
+#X msg 423 521 1;
+#X obj 853 -21 cnv 15 100 60 empty empty Vid_Fb 20 12 0 14 -262131
+-66577 0;
+#X floatatom 375 767 5 0 0 0 - - -, f 5;
+#X floatatom 409 767 5 0 0 0 - - -, f 5;
+#X floatatom 375 732 5 0 0 0 - - -, f 5;
+#X obj 409 750 * 3;
+#X obj 409 750 / 4;
+#X obj 298 751 pix_texture;
+#X obj 298 781 rectangle 5.334 4;
+#X obj 574 366 cnv 15 390 381 empty empty Gestion_Alpha 20 12 0 14
+-195568 -66577 0;
+#X obj 211 120 bng 15 250 50 0 empty empty pix_load 20 8 0 8 -24198
+-258699 -1;
+#X obj 298 65 gemhead 39;
+#X obj 298 221 pix_film;
+#X msg 460 171 auto \$1;
+#X msg 211 162 open \$1;
+#X obj 211 143 openpanel;
+#X obj 460 146 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
+1;
+#X floatatom 389 207 5 0 0 0 - - -, f 5;
+#X obj 324 281 unpack 0 0 0;
+#X floatatom 324 303 5 0 0 3 length - -, f 5;
+#X floatatom 371 303 5 0 0 3 width - -, f 5;
+#X floatatom 405 303 5 0 0 3 height - -, f 5;
+#X obj 367 263 bng 15 250 50 0 empty empty La_Fin 20 7 0 8 -1 -262144
+-1;
+#X obj 657 9 inlet;
+#X obj 324 336 outlet;
+#X obj 341 243 t b;
+#X msg 466 204 colorspace rgba;
+#X obj 756 513 line;
+#X obj 650 479 f;
+#X msg 650 496 0 \$1;
+#X obj 853 479 f;
+#X msg 853 496 1 \$1;
+#X floatatom 871 466 5 0 0 0 - - -, f 5;
+#X floatatom 665 466 5 0 0 0 - - -, f 5;
+#X obj 756 530 spigot;
+#X obj 787 515 tgl 15 0 empty empty empty 0 -6 0 8 -258699 -1 -1 0
+1;
+#X obj 734 448 cnv 15 120 21 empty empty Temps_Fade_(ms) 4 8 0 10 -262136
+-66577 0;
+#X text 701 467 < disparition;
+#X msg 657 174 1;
+#X obj 479 273 t b b b b b;
+#X msg 534 297 0;
+#X obj 665 415 r tpsFadInVFb;
+#X obj 665 449 f;
+#X obj 871 418 r tpsFadOutVFb;
+#X obj 871 448 f;
+#X obj 756 565 vsl 42 80 1e-05 0.1 0 0 empty empty Alpha 0 -8 0 8 -99865
+-262144 -1 0 1;
+#X obj 460 336 outlet;
+#X msg 454 522 0;
+#X obj 423 451 loadbang;
+#X obj 657 31 unpack s f;
+#X obj 657 79 pack s s f;
+#X obj 657 102 makesymbol %s/%s%s.avi.mov;
+#X obj 657 55 t a a;
+#X obj 892 153 bng 19 250 50 0 empty empty Start_Video 0 -8 0 8 -24198
+-258699 -1;
+#X msg 657 123 open \$1;
+#X msg 694 174 1;
+#X msg 500 297 0;
+#X msg 726 174 0;
+#X msg 757 175 0;
+#X obj 657 147 t b b a b b;
+#X connect 2 0 22 0;
+#X connect 3 0 5 0;
+#X connect 4 0 3 0;
+#X connect 5 0 18 0;
+#X connect 6 0 10 0;
+#X connect 7 0 10 1;
+#X connect 8 0 10 2;
+#X connect 9 0 10 3;
+#X connect 10 0 5 1;
+#X connect 11 0 6 0;
+#X connect 11 0 7 0;
+#X connect 11 0 8 0;
+#X connect 13 0 19 1;
+#X connect 14 0 19 2;
+#X connect 15 0 16 0;
+#X connect 15 0 13 0;
+#X connect 16 0 17 0;
+#X connect 17 0 14 0;
+#X connect 18 0 19 0;
+#X connect 21 0 26 0;
+#X connect 22 0 23 0;
+#X connect 23 0 3 0;
+#X connect 23 1 29 0;
+#X connect 23 2 36 0;
+#X connect 23 2 50 0;
+#X connect 24 0 23 0;
+#X connect 25 0 23 0;
+#X connect 26 0 25 0;
+#X connect 27 0 24 0;
+#X connect 28 0 23 1;
+#X connect 29 0 30 0;
+#X connect 29 1 31 0;
+#X connect 29 2 32 0;
+#X connect 30 0 35 0;
+#X connect 33 0 57 0;
+#X connect 34 0 60 0;
+#X connect 36 0 33 0;
+#X connect 37 0 23 0;
+#X connect 38 0 45 0;
+#X connect 39 0 40 0;
+#X connect 40 0 38 0;
+#X connect 41 0 42 0;
+#X connect 42 0 38 0;
+#X connect 43 0 41 0;
+#X connect 44 0 39 0;
+#X connect 45 0 56 0;
+#X connect 46 0 45 1;
+#X connect 49 0 9 0;
+#X connect 50 2 67 0;
+#X connect 50 3 51 0;
+#X connect 51 0 9 0;
+#X connect 52 0 53 0;
+#X connect 53 0 44 0;
+#X connect 54 0 55 0;
+#X connect 55 0 43 0;
+#X connect 58 0 9 0;
+#X connect 59 0 11 0;
+#X connect 59 0 58 0;
+#X connect 60 0 63 0;
+#X connect 60 1 61 2;
+#X connect 61 0 62 0;
+#X connect 62 0 65 0;
+#X connect 63 0 61 0;
+#X connect 63 1 61 1;
+#X connect 65 0 70 0;
+#X connect 66 0 27 0;
+#X connect 67 0 27 0;
+#X connect 68 0 27 0;
+#X connect 69 0 9 0;
+#X connect 70 0 49 0;
+#X connect 70 1 66 0;
+#X connect 70 2 23 0;
+#X connect 70 3 68 0;
+#X connect 70 4 69 0;
